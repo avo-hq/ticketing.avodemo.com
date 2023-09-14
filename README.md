@@ -1,2 +1,3 @@
-# support_management.avodemo.com
-Avo demo with tailwind integration and custom content
+# Avo demo with tailwind integration and custom content
+
+Run the project with `bin/dev` cmd
