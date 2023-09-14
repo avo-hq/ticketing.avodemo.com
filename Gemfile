@@ -72,6 +72,12 @@ group :test do
   gem "webdrivers"
 end
 
+gem "devise", "~> 4.9"
+gem "pundit", "~> 2.3", ">= 2.3.1"
+gem "progressbar", "~> 1.13"
+gem "factory_bot_rails", "~> 6.2"
+gem "faker", "~> 3.2", ">= 3.2.1"
+
 # Avo
 gemspec path: './../gems/avo'
 gemspec path: './../gems/avo-advanced'
@@ -79,3 +85,5 @@ gemspec path: './../gems/avo-pro'
 gemspec path: './../gems/avo-dashboards'
 gemspec path: './../gems/avo-dynamic_filters'
 gemspec path: './../gems/avo-menu'
+
+gem "tailwindcss-rails", "~> 2.0"

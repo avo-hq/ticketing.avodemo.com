@@ -4,3 +4,4 @@
 //= link_tree ../../../vendor/javascript .js
 //= link avo.base.js
 //= link avo.base.css
+//= link_tree ../builds

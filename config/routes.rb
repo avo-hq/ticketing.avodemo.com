@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  mount Avo::Engine, at: Avo.configuration.root_path
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root to: redirect(Avo.configuration.root_path)
+  devise_for :users
+  
+  authenticate :user, ->(user) { user.is_admin? || user.is_manager? } do
+    mount Avo::Engine, at: Avo.configuration.root_path
+  end
 end
