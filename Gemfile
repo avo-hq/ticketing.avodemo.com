@@ -56,6 +56,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "hotwire-livereload"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -70,3 +71,11 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# Avo
+gemspec path: './../gems/avo'
+gemspec path: './../gems/avo-advanced'
+gemspec path: './../gems/avo-pro'
+gemspec path: './../gems/avo-dashboards'
+gemspec path: './../gems/avo-dynamic_filters'
+gemspec path: './../gems/avo-menu'
