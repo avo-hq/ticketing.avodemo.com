@@ -1,3 +1,4 @@
 # Avo demo with tailwind integration and custom content
 
-Run the project with `bin/dev` cmd
+1. `rails db:setup`
+2. `bin/dev`
