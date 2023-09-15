@@ -1,15 +1,24 @@
 class Avo::Resources::Ticket < Avo::BaseResource
   self.includes = [:user]
-  self.search = {
-    query: -> { query.ransack(id_eq: params[:q], m: "or").result(distinct: false) }
-  }
+  self.record_selector = false
+  self.index_query = -> do
+    query.order(:priority)
+  end
 
   def fields
     field :title, as: :text
     field :description, as: :textarea
-    field :status, as: :select, enum: ::Ticket.statuses
-    field :priority, as: :select, enum: ::Ticket.priorities
-    field :user_id, as: :number
+    if view&.form?
+      field :status, as: :select, enum: ::Ticket.statuses
+      field :priority, as: :select, enum: ::Ticket.priorities
+    else
+      field :status, as: :status, success_when: [:done], loading_when: [:in_progress], failed_when: [:closed]
+      field :priority, as: :badge, sortable: true, options: {
+        success: "low",
+        warning: "medium",
+        danger: "high",
+      }
+    end
     field :user, as: :belongs_to
   end
 end

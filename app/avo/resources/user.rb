@@ -1,8 +1,6 @@
 class Avo::Resources::User < Avo::BaseResource
   self.includes = [:tickets]
-  self.search = {
-    query: -> { query.ransack(id_eq: params[:q], m: "or").result(distinct: false) }
-  }
+  self.record_selector = false
 
   def fields
     field :name, as: :text
