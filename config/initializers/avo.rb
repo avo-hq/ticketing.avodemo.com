@@ -103,8 +103,17 @@ Avo.configure do |config|
     section "HR", icon: "user-circle" do
       resource :user, icon: "user"
     end
+
+    section "Configurations", icon: "cog-6-tooth" do
+      tool :settings
+    end
   }
   # config.profile_menu = -> {
   #   link "Profile", path: "/avo/profile", icon: "user-circle"
   # }
+
+
+  def tool(name = nil)
+    link(name.to_s.humanize, path: root_path(paths: [name]))
+  end
 end
