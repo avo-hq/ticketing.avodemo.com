@@ -9,9 +9,6 @@ gem "rails", "~> 7.0.7", ">= 7.0.7.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -77,13 +74,15 @@ gem "pundit", "~> 2.3", ">= 2.3.1"
 gem "progressbar", "~> 1.13"
 gem "factory_bot_rails", "~> 6.2"
 gem "faker", "~> 3.2", ">= 3.2.1"
+gem "pg", "~> 1.5", ">= 1.5.4"
+gem "dotenv", "~> 2.8", ">= 2.8.1"
 
 # Avo
-gemspec path: './../gems/avo'
-gemspec path: './../gems/avo-advanced'
-gemspec path: './../gems/avo-pro'
-gemspec path: './../gems/avo-dashboards'
-gemspec path: './../gems/avo-dynamic_filters'
-gemspec path: './../gems/avo-menu'
+gemspec path: "./../gems/avo"
+gemspec path: "./../gems/avo-advanced"
+gemspec path: "./../gems/avo-pro"
+gemspec path: "./../gems/avo-dashboards"
+gemspec path: "./../gems/avo-dynamic_filters"
+gemspec path: "./../gems/avo-menu"
 
 gem "tailwindcss-rails", "~> 2.0"
