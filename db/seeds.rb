@@ -55,7 +55,8 @@ User.create(
   name: "Avo Cado",
   email: "avo@cado.com",
   password: (ENV["AVO_ADMIN_PASSWORD"] || :secret),
-  roles: all_roles
+  roles: all_roles,
+  settings: { tutorial: true }
 )
 users_progress_bar.increment
 

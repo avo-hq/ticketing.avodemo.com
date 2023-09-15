@@ -1,4 +1,4 @@
-class Avo::SupportManagementController < Avo::ResourcesController
+class Avo::TicketingController < Avo::ResourcesController
   before_action :set_tutorial, only: [:index]
 
   def index

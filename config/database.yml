@@ -10,12 +10,12 @@ default: &default
 
 development:
   <<: *default
-  database: support_management_development
+  database: ticketing_development
 
 test:
   <<: *default
-  database: support_management_test
+  database: ticketing_test
 
 production:
   <<: *default
-  database: support_management_production
+  database: ticketing_production

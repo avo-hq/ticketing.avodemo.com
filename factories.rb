@@ -4,6 +4,7 @@ FactoryBot.define do
     email { Faker::Internet.email }
     password { Faker::Internet.password }
     roles { {admin: false, developer: [true, false].sample, customer: [true, false].sample} }
+    settings { {tutorial: true} }
   end
 
   factory :ticket do
