@@ -1,2 +1,4 @@
-# support_management.avodemo.com
-Avo demo with tailwind integration and custom content
+# Avo demo with tailwind integration and custom content
+
+1. `rails db:setup`
+2. `bin/dev`
