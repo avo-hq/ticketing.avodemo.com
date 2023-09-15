@@ -76,6 +76,7 @@ gem "factory_bot_rails", "~> 6.2"
 gem "faker", "~> 3.2", ">= 3.2.1"
 gem "pg", "~> 1.5", ">= 1.5.4"
 gem "dotenv", "~> 2.8", ">= 2.8.1"
+gem "view_component", "~> 3.6"
 
 # Avo
 gemspec path: "./../gems/avo"

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
     scope :admin do
       get "settings", to: "avo/tools#settings"
+      post "settings", to: "avo/tools#update_settings"
     end
   end
 end

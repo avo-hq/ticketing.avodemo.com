@@ -1,0 +1,4 @@
+<div class="flex flex-col">
+  <%= render Avo::TutorialComponent.new(message: @tutorial_message, user: current_user) %>
+  <%= render template: "avo/base/index" %>
+</div>

@@ -6,11 +6,17 @@ class Avo::Resources::User < Avo::BaseResource
     field :name, as: :text
     field :email, as: :text
     field :roles, as: :boolean_group, options: User::ROLES, only_on: :forms
+
     field :roles, as: :tags do
       record.roles.map do |role, active|
         role if active
       end.compact
     end
+
+    sidebar do
+      field :settings, as: :code, format_using: -> { JSON.pretty_generate(value) }, only_on: :show
+    end
+    
     field :tickets, as: :has_many, show_on: :edit, discreet_pagination: true
   end
 end
