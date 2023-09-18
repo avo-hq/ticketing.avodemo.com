@@ -5,3 +5,4 @@
 //= link avo.base.js
 //= link avo.base.css
 //= link_tree ../builds
+//= link avo.custom.js

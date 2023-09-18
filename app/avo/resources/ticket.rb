@@ -20,5 +20,7 @@ class Avo::Resources::Ticket < Avo::BaseResource
       }
     end
     field :user, as: :belongs_to
+
+    tool Avo::ResourceTools::Comments
   end
 end

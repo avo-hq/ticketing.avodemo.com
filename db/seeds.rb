@@ -22,10 +22,12 @@ super_users = [
   {
     name: "Adrian Marin",
     email: "adrian@adrianthedev.com",
+    password: (ENV["AVO_ADMIN_PASSWORD"] || :secret),
   },
   {
     name: "Paul Bob",
-    email: "paul.ionut.bob@gmail.com"
+    email: "paul.ionut.bob@gmail.com",
+    password: (ENV["AVO_ADMIN_PASSWORD"] || :secret),
   },
 ]
 
@@ -47,7 +49,7 @@ developers_number.times do
 end
 
 super_users.reverse.each do |user|
-  FactoryBot.create(:user, name: user[:name], email: user[:email], roles: all_roles)
+  FactoryBot.create(:user, name: user[:name], email: user[:email], roles: all_roles, password: user[:password])
   users_progress_bar.increment
 end
 

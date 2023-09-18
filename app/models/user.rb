@@ -15,6 +15,7 @@ class User < ApplicationRecord
 
   # ------------------------------ Associations ------------------------------ #
   has_many :tickets, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   # ------------------------------ Validations ------------------------------- #
   validates :email, :roles, :name, presence: true

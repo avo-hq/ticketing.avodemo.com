@@ -11,3 +11,9 @@ Rails.application.routes.draw do
     end
   end
 end
+
+if defined? Avo
+  Avo::Engine.routes.draw do
+    post "new_comment_from_tool/:ticket_id", to: "comments#new_from_tool", as: :new_comment_from_tool
+  end
+end
