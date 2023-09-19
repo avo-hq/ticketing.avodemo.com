@@ -1,56 +1,7 @@
-PATH
-  remote: ../gems/avo-advanced
+GEM
+  remote: https://packager.dev/avo-hq/
   specs:
-    avo-advanced (0.1.64)
-      avo-dynamic_filters (>= 0.5.14)
-      avo-pro (>= 0.1.64)
-      rails (>= 6.1.0)
-      zeitwerk
-
-PATH
-  remote: ../gems/avo-dashboards
-  specs:
-    avo-dashboards (0.1.11)
-      avo
-      rails (>= 6.1.0)
-      turbo-rails
-      view_component
-      zeitwerk
-
-PATH
-  remote: ../gems/avo-dynamic_filters
-  specs:
-    avo-dynamic_filters (0.5.15)
-      avo
-      rails (>= 6.1.0)
-      ransack
-      view_component
-      zeitwerk
-
-PATH
-  remote: ../gems/avo-menu
-  specs:
-    avo-menu (0.1.15)
-      avo
-      docile
-      dry-initializer
-      rails (>= 6.1.0)
-      zeitwerk
-
-PATH
-  remote: ../gems/avo-pro
-  specs:
-    avo-pro (0.1.65)
-      avo (>= 3.0.1.beta8)
-      avo-dashboards (>= 0.1.10)
-      avo-menu (>= 0.1.15)
-      rails (>= 6.1.0)
-      zeitwerk
-
-PATH
-  remote: ../gems/avo
-  specs:
-    avo (3.0.1.beta9)
+    avo (3.0.1.beta10)
       actionview (>= 6.1)
       active_link_to
       activerecord (>= 6.1)
@@ -65,6 +16,35 @@ PATH
       turbo-rails
       view_component (>= 3.0.0)
       zeitwerk (>= 2.6.2)
+    avo-advanced (0.1.64)
+      avo-dynamic_filters (>= 0.5.14)
+      avo-pro (>= 0.1.64)
+      rails (>= 6.1.0)
+      zeitwerk
+    avo-dashboards (0.1.11)
+      avo
+      rails (>= 6.1.0)
+      turbo-rails
+      view_component
+      zeitwerk
+    avo-dynamic_filters (0.5.15)
+      avo
+      rails (>= 6.1.0)
+      ransack
+      view_component
+      zeitwerk
+    avo-menu (0.1.15)
+      avo
+      docile
+      dry-initializer
+      rails (>= 6.1.0)
+      zeitwerk
+    avo-pro (0.1.65)
+      avo (>= 3.0.1.beta8)
+      avo-dashboards (>= 0.1.10)
+      avo-menu (>= 0.1.15)
+      rails (>= 6.1.0)
+      zeitwerk
 
 GEM
   remote: https://rubygems.org/
