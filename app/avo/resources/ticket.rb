@@ -15,13 +15,14 @@ class Avo::Resources::Ticket < Avo::BaseResource
       
     field :user, as: :belongs_to
     status_priority_fields
+    field :created_at, as: :date_time, filterable: true, sortable: true
 
     tool Avo::ResourceTools::Comments
   end
 
   def tiny_description
-    field :tiny_description, as: :text, filterable: true, sortable: true do 
-      record.description.truncate(50)
+    field :tiny_description, as: :text do 
+      record.description.truncate(25)
     end
   end
 
