@@ -84,7 +84,7 @@ gem "annotate", "~> 3.2"
 
 source "https://packager.dev/avo-hq/" do
 # source "http://localhost:4567/avo-hq/" do
-  gem "avo"
+  # gem "avo"
   gem "avo-pro"
   gem "avo-menu"
   gem "avo-dashboards"

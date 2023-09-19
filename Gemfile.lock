@@ -329,7 +329,6 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (~> 3.2)
-  avo!
   avo-advanced!
   avo-dashboards!
   avo-dynamic_filters!
