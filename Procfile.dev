@@ -1,2 +1,3 @@
 web: bin/rails server -p 3021
+css: yarn build:css --watch
 avo_css: yarn avo:tailwindcss --watch
