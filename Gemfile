@@ -80,7 +80,17 @@ gem "view_component", "~> 3.6"
 gem "annotate", "~> 3.2"
 
 # Avo
-gem "avo-advanced", source: "https://packager.dev/avo-hq/"
+# gem "avo-advanced", source: "https://packager.dev/avo-hq/"
+
+source "https://packager.dev/avo-hq/" do
+# source "http://localhost:4567/avo-hq/" do
+  gem "avo"
+  gem "avo-pro"
+  gem "avo-menu"
+  gem "avo-dashboards"
+  gem "avo-dynamic_filters"
+  gem "avo-advanced"
+end
 
 # gemspec path: "./../gems/avo"
 # gemspec path: "./../gems/avo-advanced"
