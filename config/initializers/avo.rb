@@ -14,7 +14,7 @@ Avo.configure do |config|
   config.home_path = "#{config.root_path}/resources/tickets"
 
   ## == Licensing ==
-  # config.license_key = ENV['AVO_LICENSE_KEY']
+  config.license_key = ENV['AVO_LICENSE_KEY']
 
   ## == Set the context ==
   config.set_context do

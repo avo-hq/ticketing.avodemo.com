@@ -80,11 +80,13 @@ gem "view_component", "~> 3.6"
 gem "annotate", "~> 3.2"
 
 # Avo
-gemspec path: "./../gems/avo"
-gemspec path: "./../gems/avo-advanced"
-gemspec path: "./../gems/avo-pro"
-gemspec path: "./../gems/avo-dashboards"
-gemspec path: "./../gems/avo-dynamic_filters"
-gemspec path: "./../gems/avo-menu"
+gem "avo-advanced", source: "https://packager.dev/avo-hq/"
+
+# gemspec path: "./../gems/avo"
+# gemspec path: "./../gems/avo-advanced"
+# gemspec path: "./../gems/avo-pro"
+# gemspec path: "./../gems/avo-dashboards"
+# gemspec path: "./../gems/avo-dynamic_filters"
+# gemspec path: "./../gems/avo-menu"
 
 gem "tailwindcss-rails", "~> 2.0"
