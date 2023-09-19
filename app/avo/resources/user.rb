@@ -1,10 +1,15 @@
 class Avo::Resources::User < Avo::BaseResource
   self.includes = [:tickets]
   self.record_selector = false
+  self.search = {
+    query: -> { query.ransack(name_cont: params[:q], email_cont: params[:q]).result(distinct: false) }
+  }
 
   def fields
-    field :name, as: :text
-    field :email, as: :text
+    with_options as: :text, link_to_record: true, filterable: true, sortable: true do
+      field :name
+      field :email
+    end
     field :roles, as: :boolean_group, options: User::ROLES, only_on: :forms
 
     field :roles, as: :tags do
