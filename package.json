@@ -12,7 +12,7 @@
     "tailwindcss": "^3.2.4"
   },
   "scripts": {
-    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/tailwind.css -c ./config/tailwind.config.js --minify",
-    "avo:tailwindcss": "tailwindcss -i ./app/assets/stylesheets/avo/tailwind.css -o ./app/assets/builds/avo.tailwind.css -c ./config/avo/tailwind.config.js --minify"
+    "tailwind:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/tailwind.css -c ./config/tailwind.config.js --minify",
+    "avo:tailwind:css": "tailwindcss -i ./app/assets/stylesheets/avo/tailwind.css -o ./app/assets/builds/avo.tailwind.css -c ./config/avo/tailwind.config.js --minify"
   }
 }
