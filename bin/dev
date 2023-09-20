@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 bundle
 yarn
+bundle exec rake avo:yarn_install
 bundle exec rake avo:sym_link
 
 if command -v overmind &> /dev/null; then
