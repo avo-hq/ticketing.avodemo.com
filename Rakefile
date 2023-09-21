@@ -5,9 +5,13 @@ require_relative "config/application"
 
 Rails.application.load_tasks
 
-# When running `rake assets:precompile`
-# 1 - Task `avo:yarn_install` will run first
-# 2 - Task `avo:sym_link` will run second
-# 3 - Task `assets:precompile` will run third
+# When running `rake assets:precompile` this is the order of events:
+# 1 - Task `avo:yarn_install`
+# 2 - Task `avo:sym_link`
+# 3 - Cmd  `yarn avo:tailwind:css`
+# 4 - Task `assets:precompile`
 Rake::Task["assets:precompile"].enhance(["avo:sym_link"])
 Rake::Task["avo:sym_link"].enhance(["avo:yarn_install"])
+Rake::Task["avo:sym_link"].enhance do
+  `yarn avo:tailwind:css`
+end
