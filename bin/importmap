@@ -3,5 +3,6 @@
 require_relative "../config/application"
 require "importmap/commands"
 
-pin_all_from "app/javascript/avo/controllers", to: "controllers"
-pin "avo/application.js", preload: true
+pin_all_from "app/javascript/controllers", under: "controllers"
+pin "avo.custom", preload: true
+
