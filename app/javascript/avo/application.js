@@ -1,4 +1,4 @@
-import CommentsController from './controllers/comments_controller'
+import CommentsController from 'controllers/comments_controller'
 
 const application = window.Stimulus
 
