@@ -3,4 +3,4 @@
 require_relative "../config/application"
 require "importmap/commands"
 
-pin_all_from "app/javascript/avo/controllers", to: "avo_controllers"
+pin_all_from "app/javascript/avo/controllers", to: "controllers"
