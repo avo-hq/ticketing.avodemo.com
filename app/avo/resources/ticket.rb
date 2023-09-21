@@ -44,4 +44,14 @@ class Avo::Resources::Ticket < Avo::BaseResource
         }
     end
   end
+
+  def scopes
+    scope Avo::Scopes::HighPriority
+    scope Avo::Scopes::MediumPriority
+    scope Avo::Scopes::LowPriority
+    scope Avo::Scopes::Open
+    scope Avo::Scopes::InProgress
+    scope Avo::Scopes::Done
+    scope Avo::Scopes::Closed
+  end
 end
