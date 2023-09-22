@@ -10,8 +10,9 @@ class Avo::Resources::Ticket < Avo::BaseResource
 
   def fields
     field :title, as: :text, link_to_record: true, filterable: true, sortable: true
-    field :description, as: :textarea
+    field :description, as: :textarea, show_on: :preview
     tiny_description if view&.index?
+    field :preview, as: :preview
       
     field :user, as: :belongs_to
     status_priority_fields
