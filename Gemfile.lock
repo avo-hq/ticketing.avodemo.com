@@ -27,7 +27,7 @@ GEM
       turbo-rails
       view_component
       zeitwerk
-    avo-dynamic_filters (0.5.17)
+    avo-dynamic_filters (0.5.18)
       avo
       rails (>= 6.1.0)
       ransack
