@@ -81,5 +81,6 @@ gem "annotate", "~> 3.2"
 
 # Avo
 gem "avo-advanced", source: "https://packager.dev/avo-hq/"
+gem 'ransack', '~> 4.1', '>= 4.1.1'
 
 gem "tailwindcss-rails", "~> 2.0"
