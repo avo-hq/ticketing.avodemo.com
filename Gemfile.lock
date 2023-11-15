@@ -1,7 +1,7 @@
 GEM
   remote: https://packager.dev/avo-hq/
   specs:
-    avo (3.0.1.beta24)
+    avo (3.0.1.beta23)
       actionview (>= 6.1)
       active_link_to
       activerecord (>= 6.1)
@@ -14,9 +14,8 @@ GEM
       meta-tags
       pagy
       turbo-rails
-      turbo_power (~> 0.5.0)
-      view_component (>= 3.7.0)
-      zeitwerk (>= 2.6.12)
+      view_component (>= 3.0.0)
+      zeitwerk (>= 2.6.2)
     avo-advanced (0.1.65)
       avo-dynamic_filters (>= 0.5.19)
       avo-pro (>= 0.1.68)
@@ -306,8 +305,6 @@ GEM
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
-    turbo_power (0.5.0)
-      turbo-rails (~> 1.3)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     view_component (3.7.0)
@@ -338,6 +335,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (~> 3.2)
+  avo (= 3.0.1.beta23)!
   avo-advanced!
   bootsnap
   capybara
