@@ -27,13 +27,12 @@ GEM
       turbo-rails
       view_component (>= 3.7.0)
       zeitwerk (>= 2.6.12)
-    avo-dynamic_filters (0.5.20)
-      active_record_extended
-      avo (>= 3.0.1.beta23)
+    avo-dynamic_filters (0.5.19)
+      avo
       rails (>= 6.1.0)
-      ransack (>= 4.1.1)
-      view_component (>= 3.7.0)
-      zeitwerk (>= 2.6.12)
+      ransack
+      view_component
+      zeitwerk
     avo-menu (0.1.18)
       avo (>= 3.0.1.beta23)
       docile
@@ -98,9 +97,6 @@ GEM
     active_link_to (1.0.5)
       actionpack
       addressable
-    active_record_extended (3.2.1)
-      activerecord (>= 5.2, < 7.2.0)
-      pg (< 3.0)
     activejob (7.0.8)
       activesupport (= 7.0.8)
       globalid (>= 0.3.6)
@@ -337,6 +333,7 @@ DEPENDENCIES
   annotate (~> 3.2)
   avo (= 3.0.1.beta23)!
   avo-advanced!
+  avo-dynamic_filters (= 0.5.19)!
   bootsnap
   capybara
   debug
