@@ -1,4 +1,4 @@
-class Avo::Scopes::LowPriority < Avo::Pro::Scopes::BaseScope
+class Avo::Scopes::LowPriority < Avo::Advanced::Scopes::BaseScope
   self.name = "Low priority"
   self.description = "Low priority"
   self.scope = -> { query.low }

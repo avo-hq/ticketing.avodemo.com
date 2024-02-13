@@ -6,20 +6,23 @@ class Avo::Resources::User < Avo::BaseResource
   }
 
   def fields
-    with_options as: :text, link_to_record: true, filterable: true, sortable: true do
-      field :name
-      field :email
-    end
-    field :roles, as: :boolean_group, options: User::ROLES, only_on: :forms
+    main_panel do
+      with_options as: :text, link_to_record: true, filterable: true, sortable: true do
+        field :name
+        field :email
+      end
+      field :roles, as: :boolean_group, options: User::ROLES, only_on: :forms
 
-    field :roles, as: :tags do
-      record.roles.map do |role, active|
-        role if active
-      end.compact
-    end
+      field :roles, as: :tags do
+        record.roles.map do |role, active|
+          role if active
+        end.compact
+      end
 
-    sidebar do
-      field :settings, as: :code, format_using: -> { JSON.pretty_generate(value) }, only_on: :show
+      sidebar do
+        field :settings, as: :code, format_using: -> { JSON.pretty_generate(value) }, only_on: :show
+      end
+      
     end
     
     field :tickets, as: :has_many, show_on: :edit, discreet_pagination: true

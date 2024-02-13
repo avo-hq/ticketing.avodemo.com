@@ -1,4 +1,4 @@
-class Avo::Scopes::Closed < Avo::Pro::Scopes::BaseScope
+class Avo::Scopes::Closed < Avo::Advanced::Scopes::BaseScope
   self.name = "Closed"
   self.description = "Closed"
   self.scope = -> { query.closed }

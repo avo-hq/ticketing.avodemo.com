@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.0"
+ruby "3.3.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.7", ">= 7.0.7.2"
@@ -80,9 +80,9 @@ gem "view_component", "~> 3.6"
 gem "annotate", "~> 3.2"
 
 # Avo
+gem "avo"
 gem "avo-advanced", source: "https://packager.dev/avo-hq/"
-gem "avo", "3.0.1.beta23", source: "https://packager.dev/avo-hq/"
-gem "avo-dynamic_filters", "0.5.19", source: "https://packager.dev/avo-hq/"
+
 gem 'ransack', '~> 4.1', '>= 4.1.1'
 
 gem "tailwindcss-rails", "~> 2.0"

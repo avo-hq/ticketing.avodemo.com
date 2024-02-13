@@ -1,4 +1,4 @@
-class Avo::Scopes::Open < Avo::Pro::Scopes::BaseScope
+class Avo::Scopes::Open < Avo::Advanced::Scopes::BaseScope
   self.name = "Open"
   self.description = "Open"
   self.scope = -> { query.open }
