@@ -8,8 +8,8 @@ class Avo::UsersController < Avo::TicketingController
   def get_users
     render json: User.all.map do |user|
       {
-        label: user.name
-        value: user.id,
+        label: user.name,
+        value: user.id
       }
     end
   end
