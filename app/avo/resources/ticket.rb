@@ -55,4 +55,8 @@ class Avo::Resources::Ticket < Avo::BaseResource
     scope Avo::Scopes::Done
     scope Avo::Scopes::Closed
   end
+
+  def actions
+    action Avo::Actions::ChangeUser
+  end
 end

@@ -5,7 +5,7 @@ class TicketPolicy < ApplicationPolicy
     end
   end
 
-  [:new, :create, :edit, :update, :destroy].each do |action|
+  [:new, :create, :edit, :update, :destroy, :act_on].each do |action|
     define_method("#{action}?") do
       user.is_admin?
     end

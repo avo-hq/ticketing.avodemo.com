@@ -15,5 +15,6 @@ end
 if defined? Avo
   Avo::Engine.routes.draw do
     post "new_comment_from_tool/:ticket_id", to: "comments#new_from_tool", as: :new_comment_from_tool
+    get "users/get_users", to: "users#get_users"
   end
 end
