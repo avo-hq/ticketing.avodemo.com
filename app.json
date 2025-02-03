@@ -1,0 +1,11 @@
+{
+  "name": "Avo ticketing demo",
+  "description": "Avo ticketing demo app",
+  "website": "https://ticketing.avodemo.com/",
+  "cron": [
+    {
+      "command": "rails db:seed:replant",
+      "schedule": "0 */12 * * *"
+    }
+  ]
+}
