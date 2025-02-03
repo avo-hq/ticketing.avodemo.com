@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.3.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.7", ">= 7.0.7.2"
+gem "rails", "~> 8.0", ">= 8.0.1"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -77,7 +77,9 @@ gem "faker", "~> 3.2", ">= 3.2.1"
 gem "pg", "~> 1.5", ">= 1.5.4"
 gem "dotenv", "~> 2.8", ">= 2.8.1"
 gem "view_component", "~> 3.6"
-gem "annotate", "~> 3.2"
+
+# Not compatible with rails 8 yet
+# gem "annotate", "~> 3.2"
 
 # Avo
 gem "avo"

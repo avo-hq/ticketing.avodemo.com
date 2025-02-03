@@ -13,8 +13,8 @@
 #
 class Ticket < ApplicationRecord
   # --------------------------------- Enums ---------------------------------- #
-  enum status: { open: 0, in_progress: 1, closed: 2, done: 3 }
-  enum priority: { high: 0, medium: 1, low: 2 }
+  enum :status, { open: 0, in_progress: 1, closed: 2, done: 3 }
+  enum :priority, { high: 0, medium: 1, low: 2 }
 
   # ------------------------------ Ransackable ------------------------------ #
   def self.ransackable_attributes(auth_object = nil)
