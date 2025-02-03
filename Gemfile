@@ -87,4 +87,4 @@ gem "avo-advanced", source: "https://packager.dev/avo-hq/"
 
 gem 'ransack', '~> 4.1', '>= 4.1.1'
 
-gem "tailwindcss-rails", "~> 2.0"
+gem "tailwindcss-rails", "~> 3.3.1"
