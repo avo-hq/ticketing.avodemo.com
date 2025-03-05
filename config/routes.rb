@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   
   authenticate :user, ->(user) { user.is_admin? || user.is_manager? } do
-    mount Avo::Engine, at: Avo.configuration.root_path
+    mount_avo
 
     scope :admin do
       get "settings", to: "avo/tools#settings"
