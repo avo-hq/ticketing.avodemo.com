@@ -1,7 +1,6 @@
-@import 'tailwindcss/base';
+@import "tailwindcss";
+
 @import '../../../../tmp/avo/avo.base.css';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
 
 /*
 

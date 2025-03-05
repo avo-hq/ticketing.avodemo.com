@@ -82,9 +82,9 @@ gem "view_component", "~> 3.6"
 # gem "annotate", "~> 3.2"
 
 # Avo
-gem "avo"
+gem "avo", "3.18.1.tw4"
 gem "avo-advanced", source: "https://packager.dev/avo-hq/"
 
 gem 'ransack', '~> 4.1', '>= 4.1.1'
 
-gem "tailwindcss-rails", "~> 3.3.1"
+gem "tailwindcss-rails", "~> 4.2"
