@@ -5,10 +5,14 @@ class UserPolicy < ApplicationPolicy
     end
   end
 
-  [:new, :create, :edit, :update, :destroy, :create_tickets, :destroy_tickets, :edit_tickets].each do |action|
+  [:new, :create, :edit, :update, :create_tickets, :destroy_tickets, :edit_tickets].each do |action|
     define_method("#{action}?") do
       user.is_admin?
     end
+  end
+
+  def destroy?
+    false
   end
 
   def attach_tickets?
