@@ -20,5 +20,5 @@
 # Learn more: http://github.com/javan/whenever
 
 every 5.minutes do
-  rake "db:seed:replant"
+  command "DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:seed:replant"
 end
