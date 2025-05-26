@@ -88,3 +88,4 @@ gem "avo-advanced", source: "https://packager.dev/avo-hq/"
 gem 'ransack', '~> 4.1', '>= 4.1.1'
 
 gem "tailwindcss-rails", "~> 4.2"
+gem "whenever", require: false
