@@ -15,6 +15,10 @@ class UserPolicy < ApplicationPolicy
     false
   end
 
+  def update?
+    false
+  end
+
   def attach_tickets?
     false
   end
