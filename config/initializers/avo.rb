@@ -59,7 +59,9 @@ Avo.configure do |config|
   # config.cache_resource_filters = -> { current_user.cache_resource_filters? }
 
   ## == Customization ==
-  # config.app_name = 'Avocadelicious'
+  # Host app has minimal Avo CSS overrides in application.css; use the prebuilt
+  # Avo gem assets instead of rebuilding Tailwind during deploy.
+  config.tailwindcss_integration_enabled = false
   # config.timezone = 'UTC'
   # config.currency = 'USD'
   # config.hide_layout_when_printing = false

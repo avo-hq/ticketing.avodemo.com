@@ -154,3 +154,22 @@ Pre-flight: all incremental Avo 3 API migrations from the [2→3 guide](https://
 - **Ticket/User search**: resource search and `ChangeUser` tags picker (`/admin/resources/users/get_users`).
 - **Branding**: logo / logomark on login and admin chrome.
 - **Custom CSS**: no `--avo-*` or Algolia `.aa-*` overrides in this app — nothing to migrate.
+
+---
+
+## Post-merge fix: Tailwind / assets (2026-07-02)
+
+**Status: applied**
+
+Deploy failed on `assets:precompile` because the app still used the Avo 3 Tailwind setup:
+
+- `app/assets/stylesheets/avo/tailwind.css` imported `tmp/avo/avo.base.css` (generated only by `avo:sym_link`, not present on Hatchbox deploys).
+- `config/avo/tailwind.config.js` required `tmp/avo/tailwind.preset.js`.
+- `Procfile.dev` / `package.json` ran legacy yarn tailwind scripts instead of `tailwindcss-rails` 4.
+
+**Changes:**
+
+- Removed Avo 3 tailwind files (`app/assets/stylesheets/avo/tailwind.css`, `config/avo/tailwind.config.js`, `config/tailwind.config.js`).
+- Switched dev to `bin/rails tailwindcss:watch` (Tailwind v4 via `tailwindcss-rails ~> 4.2`).
+- Set `config.tailwindcss_integration_enabled = false` — app uses prebuilt Avo 4 gem assets; custom toggle CSS lives in `application.css`.
+- Simplified `bin/dev`, `Procfile.dev`, and `package.json` (removed legacy yarn tailwind scripts).
