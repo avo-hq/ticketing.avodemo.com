@@ -74,19 +74,9 @@ Avo.configure do |config|
   # config.resource_parent_controller = "Avo::ResourcesController"
 
   ## == Branding ==
-  config.branding = {
-  #   colors: {
-  #     background: "248 246 242",
-  #     100 => "#CEE7F8",
-  #     400 => "#399EE5",
-  #     500 => "#0886DE",
-  #     600 => "#066BB2",
-  #   },
-  #   chart_colors: ["#0B8AE2", "#34C683", "#2AB1EE", "#34C6A8"],
+  config.appearance = {
     logo: "/img/logo.png",
     logomark: "/img/logo.png",
-  #   placeholder: "/avo-assets/placeholder.svg",
-  #   favicon: "/avo-assets/favicon.ico"
   }
 
   ## == Breadcrumbs ==
@@ -97,15 +87,15 @@ Avo.configure do |config|
 
   ## == Menus ==
   config.main_menu = -> {
-    section "Manage", icon: "clipboard-document-check" do
-      resource :ticket, icon: "ticket"
-    end
-    
-    section "HR", icon: "user-circle" do
-      resource :user, icon: "user"
+    section "Manage", icon: "tabler/outline/clipboard-check" do
+      resource :ticket, icon: "tabler/outline/ticket"
     end
 
-    section "Configurations", icon: "cog-6-tooth" do
+    section "HR", icon: "tabler/outline/user-circle" do
+      resource :user, icon: "tabler/outline/user"
+    end
+
+    section "Configurations", icon: "tabler/outline/settings" do
       tool :settings
     end
   }

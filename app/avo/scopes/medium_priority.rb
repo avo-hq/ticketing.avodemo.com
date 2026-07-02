@@ -1,4 +1,4 @@
-class Avo::Scopes::MediumPriority < Avo::Advanced::Scopes::BaseScope
+class Avo::Scopes::MediumPriority < Avo::Scopes::BaseScope
   self.name = "Medium priority"
   self.description = "Medium priority"
   self.scope = -> { query.medium }

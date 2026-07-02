@@ -37,7 +37,7 @@ gem "redis", "~> 4.0"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
+gem "bootsnap", ">= 1.18", require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -76,16 +76,22 @@ gem "factory_bot_rails", "~> 6.2"
 gem "faker", "~> 3.2", ">= 3.2.1"
 gem "pg", "~> 1.5", ">= 1.5.4"
 gem "dotenv", "~> 2.8", ">= 2.8.1"
-gem "view_component", "~> 3.6"
+gem "view_component", ">= 3.7"
 
 # Not compatible with rails 8 yet
 # gem "annotate", "~> 3.2"
 
 # Avo
-gem "avo", "3.18.1.tw4"
-gem "avo-advanced", source: "https://packager.dev/avo-hq/"
+gem "avo", ">= 4.0.0.beta"
 
-gem 'ransack', '~> 4.1', '>= 4.1.1'
+source "https://packager.dev/avo-hq/" do
+  gem "avo-menu", ">= 4.0.0.beta"
+  gem "avo-advanced_search", ">= 4.0.0.beta"
+  gem "avo-scopes", ">= 4.0.0.beta"
+  gem "avo-dynamic_filters", ">= 4.0.0.beta"
+end
+
+gem "ransack", "~> 4.1", ">= 4.1.1"
 
 gem "tailwindcss-rails", "~> 4.2"
 gem "whenever", require: false

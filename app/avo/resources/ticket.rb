@@ -5,7 +5,7 @@ class Avo::Resources::Ticket < Avo::BaseResource
     query.order(:priority)
   end
   self.search = {
-    query: -> { query.ransack(title_cont: params[:q]).result(distinct: false) }
+    query: -> { query.ransack(title_cont: q).result(distinct: false) }
   }
 
   def fields

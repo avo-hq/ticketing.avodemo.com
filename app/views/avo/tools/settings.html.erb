@@ -1,8 +1,8 @@
 <turbo-frame id="settings_frame">
   <div class="flex flex-col">
       <%= render Avo::TutorialComponent.new(message: "On this page it's possible to customize your BO experience. It's build with custom styles that integrates with the avo tailwind styles.", user: current_user) %>
-    <%= render Avo::PanelComponent.new(name: 'Settings', display_breadcrumbs: true) do |c| %>
-      <% c.with_body do %>
+    <%= render Avo::UI::PanelComponent.new(title: "Settings") do |c| %>
+      <% c.with_card do %>
         <div class="flex flex-col justify-center py-6">
           <div class="px-6 space-y-4">
             <%= form_for(:settings, url: main_app.settings_path) do |form| %>
