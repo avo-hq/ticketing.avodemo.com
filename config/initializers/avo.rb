@@ -59,9 +59,7 @@ Avo.configure do |config|
   # config.cache_resource_filters = -> { current_user.cache_resource_filters? }
 
   ## == Customization ==
-  # Host app has minimal Avo CSS overrides in application.css; use the prebuilt
-  # Avo gem assets instead of rebuilding Tailwind during deploy.
-  config.tailwindcss_integration_enabled = false
+  config.tailwindcss_integration_enabled = true
   # config.timezone = 'UTC'
   # config.currency = 'USD'
   # config.hide_layout_when_printing = false
