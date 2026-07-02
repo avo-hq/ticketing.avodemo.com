@@ -107,7 +107,7 @@ GEM
       uri (>= 0.13.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    avo (4.0.3)
+    avo (4.0.4)
       actionview (>= 6.1)
       active_link_to
       activerecord (>= 6.1)
