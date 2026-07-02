@@ -1,6 +1,8 @@
 /* Host Avo overrides — compiled by Avo TailwindBuilder (app/assets/stylesheets/avo/*.css) */
 
-input:checked ~ .dot {
-  transform: translateX(100%);
-  background-color: #48bb78;
+@layer components {
+  input:checked ~ .dot {
+    transform: translateX(100%);
+    background-color: #48bb78;
+  }
 }
