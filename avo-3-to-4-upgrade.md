@@ -172,5 +172,5 @@ Deploy failed on `assets:precompile` because the app still used the Avo 3 Tailwi
 - Removed Avo 3 tailwind files (`app/assets/stylesheets/avo/tailwind.css`, `config/avo/tailwind.config.js`, `config/tailwind.config.js`).
 - Switched dev to `bin/rails tailwindcss:watch` (Tailwind v4 via `tailwindcss-rails ~> 4.2`).
 - Set `config.tailwindcss_integration_enabled = true` (default) — host overrides in `app/assets/stylesheets/avo/custom.css`, built to `app/assets/builds/avo/application.css` on precompile.
-- `Rakefile` runs `avo:sym_link` before `assets:precompile` (required for Avo core CSS `@source` paths).
+- `Rakefile` — no custom hooks; Avo 4 hooks `avo:tailwindcss:build` into `assets:precompile` automatically ([docs](https://docs.avohq.io/4.0/tailwindcss-integration.html)).
 - Simplified `bin/dev`, `Procfile.dev`, and `package.json` (removed legacy yarn tailwind scripts).

@@ -4,8 +4,3 @@
 require_relative "config/application"
 
 Rails.application.load_tasks
-
-# Avo 4 Tailwind integration: symlink plugin gem paths into tmp/avo/build-assets
-# before assets:precompile runs avo:tailwindcss:build (via the Avo engine).
-Rake::Task["assets:precompile"].enhance(["avo:sym_link"])
-Rake::Task["avo:sym_link"].enhance(["avo:yarn_install"])

@@ -7,5 +7,4 @@ fi
 
 export PORT="${PORT:-3021}"
 
-bundle exec rake avo:sym_link
 exec foreman start -f Procfile.dev "$@"
