@@ -1,7 +1,7 @@
 class Avo::ToolsController < Avo::ApplicationController
   before_action :pre_process_settings_params, only: [:update_settings]
   def settings
-    add_breadcrumb "Settings"
+    add_breadcrumb title: "Settings"
   end
 
   def update_settings
