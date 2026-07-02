@@ -1,4 +1,4 @@
-class Avo::Scopes::Done < Avo::Advanced::Scopes::BaseScope
+class Avo::Scopes::Done < Avo::Scopes::BaseScope
   self.name = "Done"
   self.description = "Done"
   self.scope = -> { query.done }
