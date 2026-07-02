@@ -59,7 +59,7 @@ Avo.configure do |config|
   # config.cache_resource_filters = -> { current_user.cache_resource_filters? }
 
   ## == Customization ==
-  # config.app_name = 'Avocadelicious'
+  config.tailwindcss_integration_enabled = true
   # config.timezone = 'UTC'
   # config.currency = 'USD'
   # config.hide_layout_when_printing = false
